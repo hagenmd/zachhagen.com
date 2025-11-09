@@ -99,15 +99,30 @@ h2 {
 }
 
 .entry-header h3 {
+    flex: 1;
+    min-width: 0;
     font-size: 1.1rem;
     font-weight: 600;
     color: #1a1a1a;
+}
+
+.entry-header h3 a.publication-title-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.entry-header h3 a.publication-title-link:hover {
+    color: #0077b5;
+    text-decoration: underline;
 }
 
 .date {
     color: #666;
     font-size: 0.9rem;
     font-weight: 400;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .company {
