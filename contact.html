@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Zachary Hagen, MD</title>
+<meta name="description" content="Zachary Hagen, MD. Emergency physician and clinical advisor in healthtech.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #ffffff;
+  --plate: #ffffff;
+  --ink: #111111;
+  --muted: #5c5c5c;
+  --hair: #d6d9dc;
+  --tint: #e8f2fb;     /* pale blue: map land */
+  --sky: #5fa0d8;      /* light blue: hatching */
+  --accent: #2e6da4;   /* blue: figure numbers, markers, hover */
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 400 1.1875rem/1.65 Spectral, Georgia, "Times New Roman", serif;
+  font-feature-settings: "onum" 1, "kern" 1;
+  padding: env(safe-area-inset-top, 0px) 1.25rem env(safe-area-inset-bottom, 0px);
+}
+.page { max-width: 62rem; margin: 0 auto; }
+a { color: var(--ink); text-decoration-color: var(--hair); text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent); text-decoration-color: currentColor; }
+a:focus-visible { outline: 1.5px solid var(--accent); outline-offset: 3px; }
+h1, h2, h3 { font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 500; margin: 0; letter-spacing: -0.01em; }
+p { margin: 0 0 1rem; }
+.sc { font-variant: small-caps; letter-spacing: 0.04em; }
+
+/* Masthead */
+.site { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.5rem 2rem;
+  padding: 1.75rem 0 1rem; border-bottom: 1px solid var(--ink); }
+.site-name { text-decoration: none; font-size: 1.1rem; font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-weight: 500; }
+.site nav { margin-left: auto; }
+.site nav ul { display: flex; gap: 0 1.75rem; margin: 0; padding: 0; list-style: none; }
+.site nav a { text-decoration: none; color: var(--muted); font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-size: 0.95rem; }
+.site nav a:hover, .site nav a[aria-current="page"] { color: var(--ink); }
+.site nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--accent); }
+.subrule { height: 3px; border-bottom: 1px solid var(--ink); margin-bottom: 3rem; }
+
+/* Plate: a framed figure */
+.plate { background: var(--plate); }
+.plate-inner { position: relative; }
+.plate-no { position: absolute; top: 0.5rem; right: 0.75rem; font-variant: small-caps; letter-spacing: 0.05em; color: var(--muted); font-size: 0.95rem; }
+.plate-art { display: block; width: 100%; height: auto; color: var(--ink); }
+.plate-art .ring { stroke: var(--plate); }
+figcaption { font-size: 0.98rem; line-height: 1.45; color: var(--muted); margin-top: 0.75rem; font-style: italic; }
+figcaption b { font-style: normal; font-weight: 500; color: var(--accent); }
+figure { margin: 0; }
+
+/* Home */
+.hero { display: grid; grid-template-columns: 1fr min(18rem, 32%); gap: 3.5rem; align-items: start; padding-bottom: 3.5rem; }
+.hero h1 { margin-bottom: 1.5rem; font-size: clamp(2.4rem, 5.5vw, 3.6rem); line-height: 1.05; letter-spacing: -0.025em; font-weight: 500; }
+.hero .title { font-style: italic; color: var(--muted); font-size: 1.3rem; margin: 0.75rem 0 1.75rem; }
+.hero .lede { font-size: 1.3rem; line-height: 1.5; }
+.links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; padding: 0; margin: 1.5rem 0 0; list-style: none; font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-size: 0.95rem; letter-spacing: 0.05em; }
+.portrait { justify-self: end; width: 100%; max-width: 20rem; }
+.portrait img { width: 100%; aspect-ratio: 3/4; display: block; object-fit: cover; color: transparent; object-position: center top; }
+.portrait figcaption { margin-top: 0.6rem; }
+
+.section { display: grid; grid-template-columns: 13rem 1fr; gap: 2.5rem; padding: 2.75rem 0; border-top: 1px solid var(--hair); }
+.section > h2 { font-size: 1.3rem; line-height: 1.3; }
+.section > div { max-width: 40rem; }
+.interests { list-style: none; margin: 0; padding: 0; }
+.interests li { padding-left: 1.6rem; position: relative; margin-bottom: 0.8rem; }
+.interests li::before { content: attr(data-n); position: absolute; left: 0; color: var(--accent); font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-size: 0.9em; }
+
+.project { padding-bottom: 2.25rem; }
+.project + .project { border-top: 1px solid var(--hair); padding-top: 2.25rem; }
+.project h3 { font-size: 1.45rem; }
+.project .meta { color: var(--muted); font-style: italic; margin: 0.2rem 0 0.75rem; }
+
+/* Resume */
+.doc-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 1rem; padding-bottom: 2.5rem; }
+.doc-head h1 { font-size: clamp(2.4rem, 5vw, 3.25rem); line-height: 1.05; }
+.doc-head p { font-style: italic; color: var(--muted); margin: 0.5rem 0 0; }
+.button { font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-size: 0.95rem; font-weight: 500; border: 1px solid var(--ink); padding: 0.45rem 1rem 0.55rem; text-decoration: none; background: var(--plate); }
+.button:hover { background: var(--ink); color: var(--paper); }
+.entry { display: grid; grid-template-columns: 1fr auto; gap: 0 1.25rem; margin-bottom: 1.4rem; }
+.entry h3 { font-size: 1.1rem; font-weight: 600; }
+.entry .role { font-style: italic; color: var(--muted); }
+.entry .when { color: var(--muted); white-space: nowrap; font-feature-settings: "lnum" 1; font-size: 1.05rem; }
+.entry p { grid-column: 1 / -1; margin: 0.25rem 0 0; }
+.plain { margin: 0; padding-left: 1.1rem; }
+.plain li { margin-bottom: 0.5rem; }
+.map-plate { margin-bottom: 3rem; }
+.entry { margin-bottom: 1rem; }
+.sub { font-size: 1rem; font-weight: 600; margin: 1.25rem 0 0.5rem; }
+.states { columns: 2; column-gap: 2rem; list-style: none; margin: 0; padding: 0; max-width: 24rem; }
+.press-head { font-size: 1.6rem; margin: 3rem 0 1.5rem; padding-top: 2.5rem; border-top: 1px solid var(--hair); }
+.arrow { text-decoration: none; font-style: normal; margin-left: 0.4rem; }
+.arrow:hover { color: var(--accent); }
+.note { font-style: italic; color: var(--muted); font-size: 1rem; margin: 0.6rem 0 0; }
+.states li { margin-bottom: 0.25rem; break-inside: avoid; }
+.patent { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: start; }
+.patent-fig { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+
+
+/* Publications */
+.pubs { display: grid; grid-template-columns: repeat(auto-fill, minmax(13.5rem, 1fr)); gap: 2.5rem 2rem; }
+.pub .plate { padding: 0.4rem; display: block; text-decoration: none; }
+.pub .sheet { position: relative; aspect-ratio: 8.5/11; border: 1px solid var(--hair); background: #fff; overflow: hidden; }
+.pub .sheet img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.pub .ph { position: absolute; inset: 0; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between; background: var(--plate); color: var(--muted); font-size: 0.95rem; line-height: 1.3; }
+.pub .ph i { color: var(--ink); font-size: 1.05rem; }
+a.plate:hover { outline: 1px solid var(--accent); }
+.pub figcaption { font-style: normal; color: var(--ink); font-size: 1.05rem; }
+.pub figcaption .venue { display: block; font-style: italic; color: var(--muted); font-size: 0.95rem; margin-top: 0.2rem; }
+.pub figcaption .authors { display: block; color: var(--muted); font-size: 0.92rem; margin-top: 0.25rem; }
+.pub .pl { display: flex; gap: 1rem; margin-top: 0.4rem; font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-size: 0.9rem; }
+
+/* Contact */
+.contact-form { display: grid; gap: 1.25rem; max-width: 34rem; }
+.contact-form label { display: grid; gap: 0.35rem; font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-size: 0.95rem; font-weight: 500; }
+.contact-form input, .contact-form textarea {
+  font: 400 1.0625rem/1.5 Spectral, Georgia, serif; color: var(--ink); background: #fff;
+  border: 1px solid var(--hair); border-radius: 2px; padding: 0.6rem 0.75rem; width: 100%; }
+.contact-form textarea { min-height: 10rem; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { outline: 2px solid var(--sky); outline-offset: 0; border-color: var(--accent); }
+.contact-form .hp { position: absolute; left: -9999px; }
+.contact-form button { justify-self: start; cursor: pointer; }
+.form-status { font-style: italic; color: var(--muted); min-height: 1.6em; margin: 0; }
+.form-status.ok { color: var(--accent); }
+@media (max-width: 480px) { .hero { grid-template-columns: 1fr; } .portrait { justify-self: start; max-width: 14rem; } }
+.publist { display: grid; }
+.pubrow { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1.5rem; align-items: start; padding: 1.5rem 0; border-top: 1px solid var(--hair); }
+.publist .pubrow:first-child { border-top: 0; padding-top: 0; }
+.mark { position: relative; width: 5.5rem; aspect-ratio: 3/4; background: var(--tint); overflow: hidden; }
+.mark span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0.4rem;
+  font: 600 0.8rem/1.2 "Instrument Sans", "Helvetica Neue", Arial, sans-serif; color: var(--accent); }
+.mark img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.mark img.cover { object-fit: contain; }
+.pubrow h3 { font-size: 1.15rem; line-height: 1.35; }
+.pubrow .venue { font-style: italic; color: var(--muted); margin: 0.3rem 0 0; }
+.pubrow .authors { color: var(--muted); font-size: 0.98rem; margin: 0.15rem 0 0; }
+.pubrow .pl { display: flex; gap: 1.25rem; margin: 0.5rem 0 0; font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif; font-size: 0.9rem; }
+@media (max-width: 480px) { .pubrow { grid-template-columns: 4rem 1fr; gap: 1rem; } .mark { width: 4rem; } }
+footer { border-top: 1px solid var(--ink); margin-top: 2rem; padding: 1.25rem 0 3rem; color: var(--muted); font-size: 0.95rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-style: italic; }
+
+@media (max-width: 760px) {
+  .section, .project { grid-template-columns: 1fr; gap: 1.75rem; }
+  .hero { gap: 1.5rem; }
+  .section { gap: 1rem; }
+  .project .plate { max-width: 20rem; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="site">
+  <a class="site-name" href="index.html">Zachary Hagen, MD</a>
+  <nav aria-label="Site"><ul><li><a href="index.html">About</a></li><li><a href="cv.html">Curriculum Vitae</a></li><li><a href="publications.html">Publications</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+</header>
+<div class="subrule"></div>
+<main>
+<div class="doc-head"><div><h1>Contact</h1><p>Send a message and it will reach me directly.</p></div></div>
+<form class="contact-form" id="contact" action="https://formspree.io/f/mbggaoka" method="POST">
+  <label>Name<input type="text" name="name" autocomplete="name" required></label>
+  <label>Email<input type="email" name="email" autocomplete="email" required></label>
+  <label>Message<textarea name="message" required></textarea></label>
+  <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+  <button class="button" type="submit">Send message</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+<script>
+(() => {
+  const form = document.getElementById("contact");
+  const status = form.querySelector(".form-status");
+  const btn = form.querySelector("button");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    btn.disabled = true; status.className = "form-status"; status.textContent = "Sending…";
+    try {
+      const r = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+      if (!r.ok) throw new Error();
+      form.reset(); status.className = "form-status ok"; status.textContent = "Thank you. Your message has been sent.";
+    } catch {
+      status.textContent = "Something went wrong. Please try again in a moment.";
+    } finally { btn.disabled = false; }
+  });
+})();
+</script>
+</main>
+<footer><span>© 2026 Zachary Hagen, MD</span></footer>
+</div>
+</body>
+</html>
